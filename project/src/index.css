@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-gray-800 antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .animate-subtle-bounce {
+    animation: subtleBounce 2s infinite;
+  }
+  
+  .animate-tail-wag {
+    animation: tailWag 0.3s ease-in-out infinite alternate;
+  }
+  
+  .animate-spanking-arm {
+    animation: spankingArm 0.3s ease-in-out infinite alternate;
+  }
+  
+  .transform-gpu {
+    transform: translateZ(0);
+  }
+  
+  .perspective-500 {
+    perspective: 500px;
+  }
+  
+  .rotate-x-10 {
+    transform: rotateX(10deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtleBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes tailWag {
+  0% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(40deg);
+  }
+}
+
+@keyframes spankingArm {
+  0% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
